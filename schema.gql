@@ -1,0 +1,26 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type HomeType {
+  id: ID!
+  img: String!
+  title: String!
+  content: String!
+}
+
+type Query {
+  Home(id: String): [HomeType!]!
+}
+
+type Mutation {
+  createHome(input: HomeInput!): HomeType!
+  updateHome(id: String!, input: HomeInput!): HomeType!
+  deleteHome(id: String!): HomeType!
+}
+
+input HomeInput {
+  img: String
+  title: String!
+  content: String!
+}
